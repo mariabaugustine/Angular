@@ -1,0 +1,34 @@
+<div class="container" id="heading">
+  <h1>{{title}}</h1>
+    <div *ngFor="let images of imagesArray;let i=index" style="padding-top:15px ;">
+     <div class="card" *ngIf="isVisible">
+      <div class="row p-3">
+          <div class="col md-6">
+            <img src="{{images}}" alt="no image to display" [width]="imgWidth">
+          </div>
+      <div class="col md-6">
+          <div *ngIf ="isVisible[i]">
+              <br>
+               {{contents[i]}} <br>
+               {{price[i]}}
+               <br><br>
+            </div>
+    <button (click)="showName(i)" class="btn btn-primary">{{isVisible[i]?'Hide Details':'Show Details'}}</button>
+</div>
+    
+     
+    
+            </div>
+    
+     
+    
+        </div>
+    
+     
+    
+    </div>
+               
+
+                   
+
+      
